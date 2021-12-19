@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <title>My PJ</title>
+</head>
+
+<body>
+    <div class="joke-container">
+        <div class="joke-box">
+            <h3>
+                Ek joke sangu ka?
+            </h3>
+            <div class="response-box">
+                <button id="haan" class="resp-button" onclick="getResponse(this.id)">Haan</button>
+                <button id="nako" class="resp-button" onclick="getResponse(this.id)">Nako</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<style>
+    .joke-container{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+        padding: 20px;
+    }
+    .joke-box{
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(225, 241, 255);
+        border: dotted 2px rgb(114, 189, 255);
+        border-radius: 5px;
+        padding: 20px 70px;
+    }
+    h3{
+        margin: 5px;
+        padding: 5px;
+    }
+    .resp-button{
+        margin: 5px;
+        padding: 5px;
+        background-color: transparent;
+        color: black;
+        border: solid 2px rgb(40, 154, 255);
+        border-radius: 5px;
+    }
+    .resp-button:hover{
+        background-color: rgb(40, 154, 255);
+        color: white;
+    }
+</style>
+
+<script>
+    let jokeBox = document.getElementsByClassName("joke-box")[0];
+    var response = "";
+    function getResponse(response){
+        if (response == "haan"){
+            jokeBox.innerText = "Aik. Ek hoti mhatari, ti lahanpanich meli :)";
+        }
+        else{
+            jokeBox.innerText = "Aik tr ekda. Ek hoti mhatari, ti lahanpanich meli :)";
+        }
+    }
+</script>
+
+</html>
