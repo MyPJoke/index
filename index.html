@@ -11,17 +11,20 @@
     <div class="joke-container">
         <div class="joke-box">
             <h3>
-                Ek joke sangu ka?
+                एक जोक सांगु का?
             </h3>
             <div class="response-box">
-                <button id="haan" class="resp-button" onclick="getResponse(this.id)">Haan</button>
-                <button id="nako" class="resp-button" onclick="getResponse(this.id)">Nako</button>
+                <button id="haan" class="resp-button" onclick="getResponse(this.id)">हो</button>
+                <button id="nako" class="resp-button" onclick="getResponse(this.id)">नको</button>
             </div>
         </div>
     </div>
 </body>
 
 <style>
+    body{
+        font-family: "comic-sans";
+    }
     .joke-container{
         width: 100%;
         height: fit-content;
@@ -33,9 +36,6 @@
     }
     .joke-box{
         width: max-content;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color: rgb(225, 241, 255);
         border: dotted 2px rgb(114, 189, 255);
         border-radius: 5px;
@@ -44,6 +44,14 @@
     h3{
         margin: 5px;
         padding: 5px;
+        align-text: center;
+    }
+    .response-box{
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
     }
     .resp-button{
         margin: 5px;
@@ -64,10 +72,10 @@
     var response = "";
     function getResponse(response){
         if (response == "haan"){
-            jokeBox.innerText = "Aik. Ek hoti mhatari, ti lahanpanich meli :)";
+            jokeBox.innerText = "ऐक. एक होती म्हातारी, ती लहानपणीच गेली :)";
         }
         else{
-            jokeBox.innerText = "Aik tr ekda. Ek hoti mhatari, ti lahanpanich meli :)";
+            jokeBox.innerText = "ऐक तर एकदा. एक होती म्हातारी, ती लहानपणीच गेली :)";
         }
     }
 </script>
